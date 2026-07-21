@@ -1,0 +1,164 @@
+.upload-card {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 16px;
+  background-color: #1e1e2f;
+  border: 1px solid #2d2d44;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+.upload-card h2 {
+  margin-bottom: 12px;
+  font-size: 32px;
+}
+.subtitle {
+  color: #b8b8c5;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.upload-card button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+  transition: 0.3s;
+}
+.upload-card button:hover {
+  background-color: #2563eb;
+}
+.file-info {
+  color: #9ca3af;
+  margin-top: 12px;
+}
+.success-message {
+  color: #22c55e;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.error-message {
+  color: #ef4444;
+  margin-top: 12px;
+  font-weight: 600;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+}
+.upload-box {
+  display: block;
+  border: 2px dashed #3b82f6;
+  border-radius: 12px;
+  padding: 35px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 20px 0;
+}
+
+.upload-box:hover {
+  background-color: #2b2b42;
+}
+
+.upload-content h3 {
+  margin: 12px 0 8px;
+}
+
+.upload-content p {
+  color: #9ca3af;
+}
+.analysis-card{
+    margin-top:30px;
+    background:#222;
+    padding:20px;
+    border-radius:12px;
+    color:white;
+    text-align:left;
+}
+
+.analysis-card h2{
+    text-align:center;
+}
+
+.analysis-card ul{
+    padding-left:20px;
+}
+
+.analysis-card li{
+    margin:8px 0;
+}
+.score-bar{
+    width:100%;
+    height:18px;
+    background:#444;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+.score-fill{
+    height:100%;
+    background:#00c853;
+    transition:width .5s ease;
+}
+
+.analysis-card p{
+    text-align:center;
+    font-weight:bold;
+}
+.skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-bottom:20px;
+}
+
+.matched-skill{
+    background:#00c853;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.missing-skill{
+    background:#d32f2f;
+    color:white;
+    padding:8px 14px;
+    border-radius:20px;
+    font-size:14px;
+}
+.job-description{
+    margin:20px 0;
+}
+
+.job-description textarea{
+    width:100%;
+    min-height:180px;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #555;
+    background:#1e1e1e;
+    color:white;
+    resize:vertical;
+    font-size:15px;
+}
+
+.job-description textarea:focus{
+    outline:none;
+    border-color:#00c853;
+}
+.ai-suggestions{
+    background:#1f1f1f;
+    color:#eee;
+    padding:15px;
+    border-radius:10px;
+    white-space:pre-wrap;
+    line-height:1.6;
+    margin-top:10px;
+}
