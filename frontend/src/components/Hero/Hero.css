@@ -1,13 +1,11 @@
 .hero {
-  height: 85vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
-
   text-align: center;
-
   padding: 40px;
 }
 
@@ -21,22 +19,4 @@
   max-width: 90%;
   font-size: 1.2rem;
   color: #666;
-}
-
-.hero button {
-  padding: 15px 35px;
-  font-size: 18px;
-  border: none;
-  border-radius: 8px;
-
-  background: #2563eb;
-  color: white;
-
-  cursor: pointer;
-
-  transition: 0.3s;
-}
-
-.hero button:hover {
-  transform: scale(1.05);
 }

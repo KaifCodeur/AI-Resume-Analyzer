@@ -6,8 +6,8 @@ function Hero({ title, description, buttonText }) {
       <h1>{title}</h1>
 
       <p>{description}</p>
-
-      <button>{buttonText}</button>
+{buttonText && <button>{buttonText}</button>}
+      
     </section>
   );
 }

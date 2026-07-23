@@ -1,3 +1,6 @@
+html{
+    scroll-behavior:smooth;
+}
 .upload-card {
   max-width: 500px;
   margin: 40px auto;
@@ -8,49 +11,84 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
   text-align: center;
 }
+
 .upload-card h2 {
   margin-bottom: 12px;
   font-size: 32px;
 }
+
 .subtitle {
   color: #b8b8c5;
   margin-bottom: 20px;
   line-height: 1.5;
 }
-.upload-card button {
-  background-color: #3b82f6;
-  color: white;
+
+/* Buttons */
+
+.remove-btn,
+.analyze-btn {
   border: none;
+  color: white;
   padding: 12px 20px;
   border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 15px;
   transition: 0.3s;
 }
-.upload-card button:hover {
-  background-color: #2563eb;
+
+.remove-btn {
+  background: #ef4444;
 }
+
+.remove-btn:hover {
+  background: #dc2626;
+  transform:translateY(-2px);
+  box-shadow:0 8px 15px rgba(0,0,0,.25);
+}
+
+.analyze-btn {
+  background: #2563eb;
+}
+
+.analyze-btn:hover {
+  background: #1d4ed8;
+  transform:translateY(-2px);
+  box-shadow:0 8px 15px rgba(0,0,0,.25);
+}
+
+.analyze-btn:disabled {
+  background: #6b7280;
+  cursor: not-allowed;
+}
+
+/* File Info */
+
 .file-info {
   color: #9ca3af;
   margin-top: 12px;
 }
+
 .success-message {
   color: #22c55e;
   font-weight: bold;
   margin-top: 15px;
 }
+
 .error-message {
   color: #ef4444;
   margin-top: 12px;
   font-weight: 600;
 }
+
 .button-group {
   display: flex;
   justify-content: center;
   gap: 12px;
   margin-top: 20px;
 }
+
+/* Upload Box */
+
 .upload-box {
   display: block;
   border: 2px dashed #3b82f6;
@@ -61,8 +99,10 @@
   margin: 20px 0;
 }
 
-.upload-box:hover {
-  background-color: #2b2b42;
+.upload-box:hover{
+    background:#2b2b42;
+    transform:translateY(-3px);
+    border-color:#22c55e;
 }
 
 .upload-content h3 {
@@ -72,93 +112,360 @@
 .upload-content p {
   color: #9ca3af;
 }
-.analysis-card{
-    margin-top:30px;
-    background:#222;
+
+/* Analysis Card */
+
+.analysis-card {
+  margin-top: 30px;
+  padding: 25px;
+  border-radius: 16px;
+  background: #181824;
+  border: 1px solid #2d2d44;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+.analysis-card h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ATS Score */
+
+.ats-score {
+  font-size: 64px;
+  font-weight: bold;
+  color: #22c55e;
+  text-align: center;
+  margin: 15px 0 5px;
+}
+
+.score-label {
+  text-align: center;
+  color: #b8b8c5;
+  margin-bottom: 20px;
+}
+
+/* Score Grid */
+
+.score-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.mini-card{
+    background:linear-gradient(145deg,#26263b,#1b1b2c);
     padding:20px;
-    border-radius:12px;
-    color:white;
-    text-align:left;
+    border-radius:15px;
+    border:1px solid #343454;
+    transition:.3s;
 }
 
-.analysis-card h2{
-    text-align:center;
+.mini-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+.mini-card h3 {
+  color: #b8b8c5;
+  font-size: 15px;
+  margin-bottom: 10px;
 }
 
-.analysis-card ul{
-    padding-left:20px;
+.mini-card h2 {
+  color: #3b82f6;
+  font-size: 28px;
 }
 
-.analysis-card li{
-    margin:8px 0;
-}
-.score-bar{
-    width:100%;
-    height:18px;
-    background:#444;
-    border-radius:20px;
-    overflow:hidden;
-    margin:15px 0;
-}
 
-.score-fill{
-    height:100%;
-    background:#00c853;
-    transition:width .5s ease;
-}
 
-.analysis-card p{
-    text-align:center;
-    font-weight:bold;
-}
-.skill-list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-    margin-bottom:20px;
+/* Skills */
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 15px 0 25px;
 }
 
 .matched-skill{
-    background:#00c853;
-    color:white;
-    padding:8px 14px;
-    border-radius:20px;
-    font-size:14px;
+    background:linear-gradient(135deg,#22c55e,#16a34a);
+    padding:10px 16px;
+    border-radius:25px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.matched-skill:hover{
+    transform:scale(1.05);
 }
 
 .missing-skill{
-    background:#d32f2f;
-    color:white;
-    padding:8px 14px;
-    border-radius:20px;
+    background:linear-gradient(135deg,#ef4444,#dc2626);
+    padding:10px 16px;
+    border-radius:25px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.missing-skill:hover{
+    transform:scale(1.05);
+}
+
+/* Job Description */
+
+.job-description {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.job-description label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.job-description textarea {
+  width: 100%;
+  min-height: 180px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #555;
+  background: #1e1e1e;
+  color: white;
+  resize: vertical;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.job-description textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+}
+
+/* AI Suggestions */
+
+.ai-suggestions {
+  background: #1f1f1f;
+  color: #eee;
+  padding: 15px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.circle-score{
+    position:relative;
+    width:180px;
+    height:180px;
+    margin:30px auto;
+}
+
+.progress-ring{
+    transform:rotate(-90deg);
+}
+
+.progress-ring-bg{
+    fill:none;
+    stroke:#2d2d44;
+    stroke-width:12;
+}
+
+.progress-ring-fill{
+    fill:none;
+    stroke:#22c55e;
+    stroke-width:12;
+    stroke-linecap:round;
+    stroke-dasharray:440;
+    transition:stroke-dashoffset .8s ease;
+}
+
+.score-text{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+}
+
+.score-text h1{
+    margin:0;
+    font-size:42px;
+    color:#22c55e;
+}
+
+.score-text p{
+    margin-top:5px;
+    color:#b8b8c5;
     font-size:14px;
 }
-.job-description{
-    margin:20px 0;
+.analysis-header{
+    text-align:center;
+    margin-bottom:25px;
 }
 
-.job-description textarea{
-    width:100%;
-    min-height:180px;
-    padding:12px;
-    border-radius:10px;
-    border:1px solid #555;
-    background:#1e1e1e;
-    color:white;
-    resize:vertical;
+.analysis-header h2{
+    margin-bottom:8px;
+    font-size:30px;
+}
+
+.analysis-header p{
+    color:#9ca3af;
     font-size:15px;
 }
+.suggestion-card{
+    margin-top:25px;
+    background:#222235;
+    border:1px solid #343454;
+    border-radius:15px;
+    padding:20px;
+}
+.analysis-card{
+    animation:fadeIn .5s ease;
+    transition:.3s;
+}
 
-.job-description textarea:focus{
-    outline:none;
-    border-color:#00c853;
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
-.ai-suggestions{
-    background:#1f1f1f;
-    color:#eee;
-    padding:15px;
+.card-icon{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.mini-card{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.section-title{
+    margin:25px 0 15px;
+    font-size:22px;
+}
+.empty-state{
+    margin:35px 0;
+    padding:30px;
+    border:2px dashed #343454;
+    border-radius:16px;
+    color:#9ca3af;
+}
+
+.empty-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+.download-container{
+    margin-top:30px;
+    text-align:center;
+}
+
+.download-btn{
+    background:#16a34a;
+    color:white;
+    border:none;
+    padding:14px 24px;
     border-radius:10px;
-    white-space:pre-wrap;
-    line-height:1.6;
-    margin-top:10px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
 }
+
+.download-btn:hover{
+    background:#15803d;
+    transform:translateY(-2px);
+    box-shadow:0 8px 15px rgba(0,0,0,.25);
+}
+@media (max-width: 768px) {
+
+    .upload-card{
+        width:95%;
+        padding:20px;
+        margin:20px auto;
+    }
+
+    .score-grid{
+        grid-template-columns:1fr;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    .button-group button{
+        width:100%;
+    }
+
+    .circle-score{
+        transform:scale(.9);
+    }
+
+    .job-description textarea{
+        min-height:140px;
+    }
+
+    .skill-list{
+        justify-content:center;
+    }
+
+    .analysis-header h2{
+        font-size:24px;
+    }
+
+    .score-text h1{
+        font-size:32px;
+    }
+}
+@media (max-width:480px){
+
+    .upload-card{
+        padding:15px;
+    }
+
+    .upload-content h3{
+        font-size:18px;
+    }
+
+    .subtitle{
+        font-size:14px;
+    }
+
+    .circle-score{
+        transform:scale(.8);
+    }
+
+    .mini-card{
+        padding:18px;
+    }
+
+    .download-btn,
+    .remove-btn,
+    .analyze-btn{
+        font-size:15px;
+        padding:12px;
+    }
+}
+.drag-active{
+    background:#263553;
+    border-color:#22c55e;
+    transform:scale(1.02);
+    transition:.3s;
+}
+.upload-success-icon{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+

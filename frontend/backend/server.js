@@ -1,3 +1,4 @@
+require("dotenv").config();
 const extractSections = require("./sectionExtractor");
 const getAISuggestions = require("./aiSuggestion");
 const calculateATSScore = require("./atsScorer");
@@ -96,7 +97,7 @@ const suggestions = await getAISuggestions(
 });
 
 // Start Server
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
   console.log(`✅ Server is running on http://localhost:${PORT}`);
