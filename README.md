@@ -1,5 +1,13 @@
 # 🚀 AI Resume Analyzer
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-AI-blue?style=for-the-badge)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=for-the-badge&logo=vercel)
+![Render](https://img.shields.io/badge/Render-Backend-46E3B7?style=for-the-badge&logo=render)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
 > **Analyze • Improve • Get Hired**
 
 An AI-powered Resume Analyzer that evaluates resumes using **ATS scoring**, extracts skills, detects missing keywords, analyzes resume sections, and generates intelligent resume improvement suggestions using **Groq Llama 3.3**.
