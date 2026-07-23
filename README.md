@@ -255,7 +255,7 @@ Returns:
 Computer Science Engineer (AI & ML)
 
 - GitHub: https://github.com/KaifCodeur
-- LinkedIn: **Add your LinkedIn URL**
+- LinkedIn: **https://www.linkedin.com/in/kaifshaikmd/**
 
 ---
 
