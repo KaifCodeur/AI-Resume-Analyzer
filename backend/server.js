@@ -1,4 +1,5 @@
 require("dotenv").config();
+const fs = require("fs");
 const extractSections = require("./sectionExtractor");
 const getAISuggestions = require("./aiSuggestion");
 const calculateATSScore = require("./atsScorer");
@@ -13,6 +14,10 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
+
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
 
 // Multer Storage
 const storage = multer.diskStorage({
