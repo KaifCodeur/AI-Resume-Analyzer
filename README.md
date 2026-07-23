@@ -17,7 +17,7 @@ An AI-powered Resume Analyzer that evaluates resumes using **ATS scoring**, extr
 ## 🌐 Live Demo
 
 ### 🔗 Frontend
-**https://YOUR-VERCEL-URL.vercel.app**
+**https://ai-resume-analyzer-hwrd.vercel.app/**
 
 ### ⚙️ Backend API
 **https://ai-resume-analyzer-fk1n.onrender.com**
